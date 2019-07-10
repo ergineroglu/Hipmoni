@@ -1,0 +1,1194 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hipmoni Soyunma Kabini</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">    
+    
+    <!-- IE Hacks -->    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">    
+	    
+	<!-- Css Includes -->    
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/dressingroom.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.alerts.css" />
+    
+</head>
+
+<body>
+	
+    <!-- IE Hacks -->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script> -->
+
+  	<!--<script>
+   		CFInstall.check(
+		{
+	    	mode: "overlay",
+     		destination: "canvas.html"
+   		});
+  	</script>-->
+    
+	<!-- Processing Image -->
+    <div id="progressDiv" class="active">
+        <img src="images/loading.gif" >
+    </div>
+    
+	<!-- Alt Boşluk Başlangıç -->
+    <div id="lowerEmptyPanel">
+    </div>
+    <!-- Alt Boşluk Bitiş -->
+    
+    <!-- Sağ Boşluk Başlangıç -->
+    <div id="rightEmptyPanel">
+    </div>
+    <!-- Sağ Boşluk Bitiş -->
+    
+    <!-- Sol Gezinti Bölmesi Başlangıç -->
+    <div id="leftNavigationPanel" >
+    
+        <!-- Tab List -->
+        <ul id="leftNavigationList">
+            <li class="leftNavigationItem" id="dressingRoomNavItem">
+                <a target="#dressingRoom" title="Soyunma Odası"></a>
+            </li>
+            <li class="leftNavigationItem" id="creationsNavItem">
+                <a target="#creations" title="Kreasyonlarım"></a>
+            </li>            
+            <li class="leftNavigationItem" id="profileNavItem">
+                <a target="#profile" title="Profilim"></a>
+            </li>
+            <li class="leftNavigationItem" id="circlesNavItem">
+                <a target="#circles" title="Çevrem"></a>
+            </li>
+            <li class="leftNavigationItem" id="basketNavItem">
+                <a target="#basket" title="Sepetim"></a>
+            </li>
+        </ul>
+    
+    </div>
+    <!-- Sol Gezinti Bölmesi Bitiş -->
+    
+    <!-- Üst Menü Başlangıç -->
+    <div id="upperNavigationPanel"> 
+    
+    	<div id="upperNavigationPanelInner">
+        	<div id="upperNavigationPanelLeft">
+            	<img id="upperNavigationPanelLogo" src="images/logo.png"/>
+			</div>
+            <div id="upperNavigationPanelRight">            	
+                <div id="upperNavigationPanelRightUserName">Paris Hilton</div>
+                <div id="upperNavigationPanelRightNotification">2</div>               
+                <img id="upperNavigationPanelUserIcon" src="images/user.png"/>
+			</div>
+        </div>
+    
+    </div>
+    <!-- Üst Menü Bitiş -->
+    
+    <!-- Notification Başlangıç -->
+    <div id="notificationPanel"> 
+    	
+        <div class="notificationItem">
+        	<div class="notificationItemLeft">
+            	<img class="notificationItemImage" src="images/users/user3.png"/>
+            </div>
+            <div class="notificationItemRight"><p><span class="notificationItemUser">Miranda Kerr</span> - <span class="notificationItemSpecial">'Yeni Yaz Modası'</span> isimli stilini paylaştı</p></div>            
+        </div>
+        
+        <div class="notificationItem">
+        	<div class="notificationItemLeft">
+            	<img class="notificationItemImage" src="images/users/user9.png"/>
+            </div>
+            <div class="notificationItemRight"><p><span class="notificationItemUser">Britney Spears</span> - <span class="notificationItemSpecial">'Bir Yaz Gecesi Rüyası'</span> isimli stiline yeni bir yorum yapıldı</p></div>            
+        </div>
+        
+    </div>
+    <!-- Notification Bitiş -->
+    
+    <!-- Beyaz Çerçeve Başlangıç -->
+    <div id="outerBorder">
+    </div>
+    <!-- Beyaz Çerçeve Bitiş -->
+    
+    <!-- İçerik Bölüm Başlangıç -->
+    <div id="content">
+    
+        <!-- Soyunma Kabini Başlangıç -->
+        <div id="dressingRoom">                       
+        
+            <div id="modelArea">		
+            
+            	<div id="productList">
+                    <ul id="productFilters">
+                        <li category="womenAll"><span class="active">Tümünü Göster</span></li>
+                        <li category="womenNew"><span>Yeni Gelenler</span></li>
+                        <li category="womenSale"><span>İndirimdekiler</span></li>
+                    </ul>
+                    <ul id="productCategories">   
+                        <li category="womenTop" class="folded">
+                            <span>Üst Giyim</span>
+                            <ul>
+                                <li category="womenTop"><span>Tümünü Göster</span></li>
+                                <li category="womenTopVest"><span>Kolsuz</span></li>
+                                <li category="womenTopShortSleeve"><span>Kısa Kollu</span></li>
+                                <li category="womenTopLongSleeve"><span>Uzun Kollu</span></li>
+                            </ul>
+                        </li>
+                        <li category="womenShirtAndBlouse" class="folded">
+                            <span>Gömlek &amp; Bluz</span>
+                            <ul>
+                                <li category="womenShirtAndBlouse"><span>Tümünü Göster</span></li>
+                                <li category="womenShirt"><span>Gömlek</span></li>
+                                <li category="womenBlouse"><span>Bluz</span></li>
+                                <li category="womenTunic"><span>Tunik</span></li>
+                            </ul>
+                        </li>
+                        <li category="womenCardiganAndJumper" class="folded">
+                            <span>Hırka &amp; Kazak</span>
+                            <ul>
+                                <li category="womenCardiganAndJumper"><span>Tümünü Göster</span></li>
+                                <li category="womenCardigan"><span>Hırka</span></li>
+                                <li category="womenJumper"><span>Kazak</span></li>
+                                <li category="womenSweatshirt"><span>Kapişon &amp; Sweat</span></li>
+                            </ul>
+                        </li>
+                        <li category="womenTrousersAndShorts" class="folded">
+                            <span>Pantolon &amp; Şort</span>
+                            <ul>
+                                <li category="womenTrousersAndShorts"><span>Tümünü Göster</span></li>
+                                <li category="womenTrousers"><span>Pantolon</span></li>
+                                <li category="womenJeans"><span>Jeans</span></li>
+                                <li category="womenLeggings"><span>Tayt</span></li>
+                                <li category="womenJumpsuit"><span>Tulum</span></li>
+                                <li category="womenShorts"><span>Şort</span></li>
+                            </ul>
+                        </li>
+                        <li category="womenDress" class="folded">
+                            <span>Elbise</span>
+                            <ul>
+                                <li category="womenDress"><span>Tümünü Göster</span></li>
+                                <li category="womenShortDress"><span>Kısa Elbise</span></li>
+                                <li category="womenLongDress"><span>Uzun Elbise</span></li>								
+                            </ul>
+                        </li>
+                        <li category="womenJacketAndCoat" class="folded">
+                            <span>Mont &amp; Palto</span>
+                            <ul>
+                                <li category="womenJacketAndCoat"><span>Tümünü Göster</span></li>
+                                <li category="womenJacket"><span>Mont</span></li>
+                                <li category="womenCoat"><span>Palto</span></li>								
+                            </ul>
+                        </li>
+                        <li category="womenBlazerAndWaistcoat" class="folded">
+                            <span>Yelek &amp; Blazer</span>
+                            <ul>
+                                <li category="womenBlazerAndWaistcoat"><span>Tümünü Göster</span></li>
+                                <li category="womenBlazer"><span>Blazer</span></li>
+                                <li category="womenWaistcoat"><span>Yelek</span></li>								
+                            </ul>
+                        </li>
+                        <li category="womenSport" class="folded">
+                            <span>Spor Giyim</span>
+                            <ul>
+                                <li category="womenSport"><span>Tümünü Göster</span></li>
+                                <li category="womenSportTop"><span>Spor Üstleri</span></li>
+                                <li category="womenSportBottom"><span>Spor Altları</span></li>
+                                <li category="womenSportAccesories"><span>Spor Aksesuarları</span></li>
+                            </ul>
+                        </li>
+                        <li category="womenSocksAndTights" class="folded">
+                            <span>Çorap &amp; Külotlu Çorap</span>
+                            <ul>
+                                <li category="womenSocksAndTights"><span>Tümünü Göster</span></li>
+                                <li category="womenSocks"><span>Çorap</span></li>
+                                <li category="womenTights"><span>Külotlu Çorap</span></li>								
+                            </ul>
+                        </li>
+                        <li category="womenAccesories" class="folded">
+                            <span>Aksesuar</span>
+                            <ul>
+                                <li category="womenAccesories"><span>Tümünü Göster</span></li>
+                                <li category="womenBagAndPurse"><span>Çanta &amp; Cüzdan</span></li>
+                                <li category="womenBelt"><span>Kemer</span></li>
+                                <li category="womenHatAndShawl"><span>Şapka &amp; Şal</span></li>
+                                <li category="womenSunGlasses"><span>Güneş Gözlüğü</span></li>
+                                <li category="womenJewellery"><span>Takı</span></li>
+                                <li category="womenHairAccessories"><span>Saç Aksesuarı</span></li>
+                            </ul>
+                        </li>
+                        <li category="womenShoes" class="folded">
+                            <span>Ayakkabı</span>
+                            <ul>
+                                <li category="womenShoes"><span>Tümünü Göster</span></li>
+                                <li category="womenHighHeels"><span>Topuklu</span></li>
+                                <li category="womenNormalShoes"><span>Düz</span></li>								
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="dressingRoomModelCloths" class="modelCloths">		
+                    <ul class="modelClothsList">
+                        <li class="modelClothsListName">
+                            <textarea maxlength="25" spellcheck="false">Yeni Tasarım</textarea>
+                        </li>
+                        <li class="modelClothsListTotal">
+                            <span>Toplam - </span>
+                            <span class="totalAmount">0.00 TL</span>
+                        </li>
+                        <li class="modelClothsListButtons">                            
+                            <img class="addToBasket" title="Sepete Ekle" src="images/canvasBasket.png">
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="dressingRoomModelCanvasArea" class="modelCanvasArea">
+                    <canvas id="dressingRoomModelCanvas" class="modelCanvas" width="240" height="638"></canvas>
+                    <div class="modelCanvasNavigationButtons">
+                        <img class="canvasUndo canvasButton" title="Geri Al" src="images/canvas_undo_inactive.png" />
+                        <img class="canvasRedo canvasButton" title="İleri Al" src="images/canvas_redo_inactive.png" />
+                    </div>
+                    <div class="modelCanvasViewButtons">
+                        <img class="canvasRotate canvasButton" title="Mankeni Döndür" src="images/canvas_rotate_inactive.png" />
+                    </div>
+                </div>
+                                                
+                <div id="lowerNavigationView">                    
+    
+                    <ul id="lowerNavigationList">
+                        <li id="lowerNavigationNew"><span>YENİ</span></li>
+                        <li id="lowerNavigationSave"><span>KAYDET</span></li>
+                        <li id="nav-changeModel" target="#modelListMenuView" class="toggleMenu"><span>MODELLER</span></li>
+                        <li id="nav-changeBg" target="#backgroundListMenuView" class="toggleMenu"><span>ARKA PLANLAR</span></li>
+                    </ul>
+                    
+                </div> 
+
+            </div>
+            
+            <div id="productCatalog" class="catalogMenu sliderMenu">				
+                
+                <div class="catalogMenuNavigation">                    
+                    <div class="catalogMenuNavigationCenter">
+                        <a class="browse left prev"></a>
+                        <span></span>
+                        <a class="browse right next"></a>
+                    </div>
+                </div>
+                
+                <div id="productCatalogList" class="scrollableList">
+                    <div id="productCatalogItems" class="scrollableItems"></div>
+                </div>
+
+                <div class="catalogMenuNavigation">					                    
+                    <div class="catalogMenuNavigationCenter">
+                        <a class="browse left prev"></a>
+                        <span></span>
+                        <a class="browse right next"></a>
+                    </div>
+                </div>                        
+            
+            </div>
+            
+            <!-- Models -->
+            <div id="modelListMenuView" class="lowerMenu sliderMenu">
+        
+                <!-- "previous page" action -->
+                <a class="prev browse left"></a>
+                 
+                <!-- root element for scrollable -->
+                <div class="scrollableList lowerMenuScrollable" id="modelListMenu" >
+                    <div class="scrollableItems">
+                        <!-- 1-5 -->
+                        <div>
+                            <div class="scrollableItem" gender="ladies" model-id="model1"><img src="images/models/ladies/model1/preview.png" /></div>
+                            <div class="scrollableItem" gender="ladies" model-id="model2"><img src="images/models/ladies/model2/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model3/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model4/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model5/preview.png" /></div>                            
+                        </div>
+                        <!-- 7-12 -->
+                        <div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model6/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model7/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model8/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model9/preview.png" /></div>
+                            <div class="scrollableItem"><img src="images/models/ladies/model10/preview.png" /></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- "next page" action -->
+                <a class="next browse right"></a>
+            
+            </div>
+            
+            <!-- Backgrounds -->
+            <div id="backgroundListMenuView" class="lowerMenu sliderMenu">
+        
+                <!-- "previous page" action -->
+                <a class="prev browse left"></a>
+                 
+                <!-- root element for scrollable -->
+                <div class="scrollableList lowerMenuScrollable" id="backgroundListMenu" >
+                    <div class="scrollableItems">
+                        <!-- 1-3 -->
+                        <div>
+                            <div class="scrollableItem" background-id="background1"><img src="images/backgrounds/background1/preview.png" /></div>
+                            <div class="scrollableItem" background-id="background2"><img src="images/backgrounds/background2/preview.png" /></div>
+                            <div class="scrollableItem" background-id="background3"><img src="images/backgrounds/background3/preview.png" /></div>
+                        </div>
+                        <!-- 3-6 -->
+                        <div>
+                            <div class="scrollableItem" background-id="background4"><img src="images/backgrounds/background4/preview.png" /></div>
+                            <div class="scrollableItem" background-id="background5"><img src="images/backgrounds/background5/preview.png" /></div>
+                            <div class="scrollableItem" background-id="background6"><img src="images/backgrounds/background6/preview.png" /></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- "next page" action -->
+                <a class="next browse right"></a>
+            
+            </div>
+    
+        </div>
+        <!-- Soyunma Kabini Bitiş -->
+        
+        <div id="creations">
+        	
+            <div id="creationsModelCloths" class="modelCloths">		
+                <ul class="modelClothsList">
+                    <li class="modelClothsListName">
+                        <textarea maxlength="25" spellcheck="false" disabled="disabled">Yeni Tasarım</textarea>
+                    </li>
+                    <li class="modelClothsListTotal">
+                        <span>Toplam - </span>
+                        <span class="totalAmount">0.00 TL</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="creationsModelCanvasArea" class="modelCanvasArea">
+                <canvas id="creationsModelCanvas" class="modelCanvas" width="240" height="638"></canvas>                
+                <div class="modelCanvasViewButtons">
+                    <img class="canvasRotate canvasButton" title="Mankeni Döndür" src="images/canvas_rotate_inactive.png" />
+                </div>
+                <div class="modelCanvasNavigationButtons">
+					<img class="canvasDressingRoom canvasButton" title="Podyuma Aktar" src="images/canvas_dressingroom_inactive.png" />
+				</div>
+            </div>
+            
+            <div id="creationsReviewPanelWrapper">            
+                <div id="creationsReviewPanel" class="reviewPanel">
+                    
+                    <div class="reviewPanelHeader">
+                    	<div class="reviewCount">
+                        	<h2>Yorumlar(7)</h2>
+                        </div>
+                        <div class="newReview">
+                        	<h3>Yorum Ekle</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="reviewPanelNewReview">
+                    	<textarea class="reviewTextArea" placeholder="Yorumunu gir..." rows="5" spellcheck="false"></textarea>
+                        <div class="reviewButton sendReview">
+                        	<h3>Gönder</h3>
+                        </div>
+                        <div class="reviewButton cancelReview">
+                        	<h3>İptal</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="reviewPanelReviews tinyScrollBar">
+                        <div class="scrollbar">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="overview">
+                        
+                                <ul class="reviewList">
+                                
+                                    <li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user2.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Nicole Richie</div>
+                                                    <div class="reviewItemDate">18:49:16 26.05.2012</div>
+                                                </div> 
+                                                <div class="reviewItemMessage">Kesinlikle ikincisi canım. Seni daha canlı gösterir. Herkesin gözü üzerinde olacak gecede ;)</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                                                                            
+                                    <li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Paris Hilton</div>
+                                                    <div class="reviewItemDate">18:44:11 26.05.2012</div>
+                                                </div>                                               
+                                                <div class="reviewItemMessage">Akşamki yemeğe peki saçımı nasıl yapsam acaba canım? Bu kıyafetle hangisi daha güzel gider?<br><br><img src="images/hair1.png"/><img src="images/hair2.png"/></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Paris Hilton</div>
+                                                    <div class="reviewItemDate">18:15:41 26.05.2012</div>
+                                                </div>
+                                                <div class="reviewItemMessage">Süüüperrrrr!!! Tek kelimeyle bayıldım bebeğim. Hipmoni de indirimi bulmuşken kaçırmıycam canım. Bir tanesin <3</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+									<li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user2.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Nicole Richie</div>
+                                                    <div class="reviewItemDate">17:59:21 26.05.2012</div>
+                                                </div>
+                                                <div class="reviewItemMessage">Bak bu Nine West ayakkabıya bayılacaksın, hem de indirimde. Sakın kaçırma canım<br><img src="images/nineWestShoe.png"/></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+									<li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user2.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Nicole Richie</div>
+                                                    <div class="reviewItemDate">17:16:55 26.05.2012</div>
+                                                </div>
+                                                <div class="reviewItemMessage">Hiç üzülme bitanem ben sana hemencecik şık bir ayakkabı bulurum</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Paris Hilton</div>
+                                                    <div class="reviewItemDate">16:56:43 26.05.2012</div>
+                                                </div>
+                                                <div class="reviewItemMessage">Beğenmene çok sevindim bebeğim, ama altına bir türlü ayakkabı yakıştıramadım. Ne yapacağımı bilmiyorum oooffff : (</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="reviewListItem">
+                                    	<div class="reviewItem">
+                                        	<div class="reviewItemUserImage">
+                                            	<img src="images/user2.png" />
+                                            </div>
+                                            <div class="reviewItemText">
+                                            	<div class="reviewItemUpper clearfix">
+                                                    <div class="reviewItemUserName">Nicole Richie</div>
+                                                    <div class="reviewItemDate">15:00:02 26.05.2012</div>
+                                                </div>
+                                                <div class="reviewItemMessage">Kolsuz t-shirt ile keten pantolonu çok iyi kombin etmişsin canım, sana çok yakışmış <3</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+					</div>
+                </div>
+			</div>
+            
+            <div id="creationCatalog" class="catalogMenu sliderMenu">				
+                
+                <div class="catalogMenuNavigation">                    
+                    <div class="catalogMenuNavigationCenter">
+                        <a class="browse left prev"></a>
+                        <span></span>
+                        <a class="browse right next"></a>
+                    </div>
+                </div>
+                
+                <div id="creationCatalogList" class="scrollableList">
+                    <div id="creationCatalogItems" class="scrollableItems">
+                    	<div>
+                        	<div class="creationCatalogListItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalogMenuNavigation">					                    
+                    <div class="catalogMenuNavigationCenter">
+                        <a class="browse left prev"></a>
+                        <span></span>
+                        <a class="browse right next"></a>
+                    </div>
+                </div>                        
+            
+            </div>
+            
+        </div>
+                
+        <div id="circles">
+        	<div id="circlesWallWrapper">
+                <div id="circlesWall" class="tinyScrollBar">
+                    <div class="scrollbar">
+                        <div class="track">
+                            <div class="thumb">
+                                <div class="end">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewport">
+                        <div class="overview">
+                            <div class="circlesWallItem">
+                                <div class="circlesWallItemLeft">
+                                    <img class="circlesWallItemUserPhoto" src="images/users/user3.png"/>
+                                </div>
+                                <div class="circlesWallItemRight">
+                                    <div class="circlesWallItemInformation">
+                                        <div class="circlesWallItemInformationName">Miranda Kerr, <span class="circlesWallItemInformationStyle">'Yeni Yaz Modası'</span> isimli stilini paylaştı</div>
+                                        <div class="circlesWallItemInformationDate">23 Mayıs, 09:15:46</div>
+                                        <div class="circlesWallItemModelExpand">
+                                    		<h2>Stili Göster</h2>
+										</div>                                        
+                                    </div>
+                                                                        
+                                    <div id="circlesWallItem1ClothsList" class="modelCloths">		
+                                        <ul class="modelClothsList">
+                                            <li class="modelClothsListName">
+                                                <textarea maxlength="25" spellcheck="false" disabled="disabled">Yeni Yaz Modası</textarea>
+                                            </li>
+                                            <li class="modelClothsListTotal">
+                                                <span>Toplam - </span>
+                                                <span class="totalAmount">0.00 TL</span>
+                                            </li>
+                                        </ul>
+                                    </div>                                                                                                
+									
+                                    <div class="circlesWallItemExpandableSmallView">
+                                    	<img id="circlesWallItem1ExpandableSmallViewImage" src=""/>
+                                    </div>
+                                    
+                                    <div class="circlesWallItemExpandableLargeView">
+                                        <div id="circlesWallItem1CanvasArea" class="modelCanvasArea">
+                                            <canvas id="circlesWallItem1Canvas" class="modelCanvas" width="240" height="638"></canvas>
+                                        </div>
+                                    
+                                        <div class="reviewPanel">
+                        
+                                            <div class="reviewPanelHeader">
+                                                <div class="reviewCount">
+                                                    <h2>Yorumlar(5)</h2>
+                                                </div>
+                                                <div class="newReview">
+                                                    <h3>Yorum Ekle</h3>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="reviewPanelNewReview">
+                                                <textarea class="reviewTextArea" placeholder="Yorumunu gir..." rows="5" spellcheck="false"></textarea>
+                                                <div class="reviewButton sendReview">
+                                                    <h3>Gönder</h3>
+                                                </div>
+                                                <div class="reviewButton cancelReview">
+                                                    <h3>İptal</h3>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="reviewPanelReviews">
+                                                
+                                                <ul class="reviewList">
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/user.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Paris Hilton</div>
+                                                                    <div class="reviewItemDate">18:49:16 26.05.2012</div>
+                                                                </div>                                                
+                                                                <div class="reviewItemMessage">Evet bebeğim ama hala hangi ayakkabıyı seçeçeğime karar veremeedim ühüüüüü :(</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/user2.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Nicole Richie</div>
+                                                                    <div class="reviewItemDate">15:55:45 26.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">Canım bu akşam Soho'ya giderken bunları mı giyeceksin yoksa ;)</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/user.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Paris Hilton</div>
+                                                                    <div class="reviewItemDate">11:20:32 26.05.2012</div>
+                                                                </div>                                                
+                                                                <div class="reviewItemMessage">Beğenmenize çok sevindim kızlar.<br>Daha şık bir ayakkabıyla kombin etmek istiyorsanız bu iki ayakkabıyı öneriyorum:<br><img style="margin-left: 15px;" src="images/nineWestShoe.png"/><img style="margin-left: 15px;" src="images/louboutinShoe.png"/></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/users/user10.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Gwen Stefani</div>
+                                                                    <div class="reviewItemDate">23:15:32 25.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">İnanılmaz tatlı <3<br>Hollywood sokaklarında beni bu tarzla görebilirsiniz ;)</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/users/user4.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Katy Perry</div>
+                                                                    <div class="reviewItemDate">13:35:12 25.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">Uzun süredir gördüğüm en şık stil<br>Hemen siparişi verdim, öneri için sağol canım</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                </ul>
+                                                   
+                                            </div>
+                                        </div>                                              
+                                              
+									</div>
+                                                                                                        
+                                </div>
+                            </div>
+                            
+                            <div class="circlesWallItem">
+                                <div class="circlesWallItemLeft">
+                                    <img class="circlesWallItemUserPhoto" src="images/users/user9.png"/>
+                                </div>
+                                <div class="circlesWallItemRight">
+                                    <div class="circlesWallItemInformation">
+                                        <div class="circlesWallItemInformationName">Britney Spears'ın, <span class="circlesWallItemInformationStyle">'Bir Yaz Gecesi Rüyası'</span> isimli stiline yeni bir yorum yapıldı</div>
+                                        <div class="circlesWallItemInformationDate">21 Mayıs, 23:11:13</div>
+                                         <div class="circlesWallItemModelExpand">
+                                    		<h2>Stili Göster</h2>
+										</div> 
+                                    </div>
+                                    
+                                    
+                                    <div id="circlesWallItem2ClothsList" class="modelCloths">		
+                                        <ul class="modelClothsList">
+                                            <li class="modelClothsListName">
+                                                <textarea maxlength="25" spellcheck="false" disabled="disabled">Bir Yaz Gecesi Rüyası</textarea>
+                                            </li>
+                                            <li class="modelClothsListTotal">
+                                                <span>Toplam - </span>
+                                                <span class="totalAmount">0.00 TL</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        
+                        
+                        			<div class="circlesWallItemExpandableSmallView">
+                                    	<img id="circlesWallItem2ExpandableSmallViewImage" src=""/>
+                                    </div>
+                                    
+                                    <div class="circlesWallItemExpandableLargeView">
+                                        <div id="circlesWallItem2CanvasArea" class="modelCanvasArea">
+                                            <canvas id="circlesWallItem2Canvas" class="modelCanvas" width="240" height="638"></canvas>
+                                        </div>
+                                    
+                                        <div class="reviewPanel">
+                        
+                                            <div class="reviewPanelHeader">
+                                                <div class="reviewCount">
+                                                    <h2>Yorumlar(4)</h2>
+                                                </div>
+                                                <div class="newReview">
+                                                    <h3>Yorum Ekle</h3>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="reviewPanelNewReview">
+                                                <textarea class="reviewTextArea" placeholder="Yorumunu gir..." rows="5" spellcheck="false"></textarea>
+                                                <div class="reviewButton sendReview">
+                                                    <h3>Gönder</h3>
+                                                </div>
+                                                <div class="reviewButton cancelReview">
+                                                    <h3>İptal</h3>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="reviewPanelReviews">
+                                                
+                                                <ul class="reviewList">
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/users/user2.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Adriana Lima</div>
+                                                                    <div class="reviewItemDate">09:11:59 27.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">Üzüldüğün şeye bak Elizabethcim, senin stilini de ben hazırlarım. Herkesin gözü senin üzerinde olur</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/users/user8.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Elizabeth Olsen</div>
+                                                                    <div class="reviewItemDate">01:10:03 27.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">Ben ne olucam Britney abla?<br>Mezuniyete iki hafta kaldı, hala ne giyeceğimi bulamadım ühühühüühüüü</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/users/user9.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Britney Spears</div>
+                                                                    <div class="reviewItemDate">20:32:12 26.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">Canım Blakecim için rahat olsun, ben sana özelden yeni bir stil atıcam ;)</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                    <li class="reviewListItem">
+                                                        <div class="reviewItem">
+                                                            <div class="reviewItemUserImage">
+                                                                <img src="images/users/user6.png" />
+                                                            </div>
+                                                            <div class="reviewItemText">
+                                                                <div class="reviewItemUpper clearfix">
+                                                                    <div class="reviewItemUserName">Blake Lively</div>
+                                                                    <div class="reviewItemDate">18:10:09 26.05.2012</div>
+                                                                </div>
+                                                                <div class="reviewItemMessage">Britney abla şahane olmuş tek kelimeyle<br>Ayakkabıyı değiştirip mezuniyet baloma giymek istiyorum ama birisiyle pişti olmaktan korkuyorum</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                </ul>
+                                                   
+                                            </div>
+                                        </div>
+									</div>                                                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+				</div>
+            </div>
+        </div>
+        
+        <div id="profile">
+        	
+            <div id="profilePhoto">
+            	<img class="profilePhotoBig" src="images/userBig.png" />
+			</div>
+            <div id="profileDetail">
+            	<div id="profileInformation">
+                	<div id="profileInformationName">Paris Hilton</div>
+                    <div id="profileInformationHip">Hip Puanı: <span id="profileInformationHipPoint">250</span> - <span id="profileInformationHipLevel">Moda İkonu</span></div>
+                    <div id="profileInformationBonus">Hediye Puanı: <span id="profileInformationBonusPoint">510</span>TL</div>
+                </div>
+                <div id="profileFollowing" class="profilePhotoList">
+                	<div class="profilePhotoListName">Takip Ettiklerim(15)</div>
+                    <div class="profilePhotoListScrollable tinyScrollBar">
+                        <div class="scrollbar">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="overview">
+                            	<div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user1.png" />
+                                    <div class="profilePhotoListItemName">Nicole Richie</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user2.png" />
+                                    <div class="profilePhotoListItemName">Adriana Lima</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user3.png" />
+                                    <div class="profilePhotoListItemName">Miranda Kerr</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user4.png" />
+                                    <div class="profilePhotoListItemName">Katy Perry</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user5.png" />
+                                    <div class="profilePhotoListItemName">Angelina Jolie</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user6.png" />
+                                    <div class="profilePhotoListItemName">Blake Lively</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user7.png" />
+                                    <div class="profilePhotoListItemName">Cameron Diaz</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user8.png" />
+                                    <div class="profilePhotoListItemName">Elizabeth Olsen</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user9.png" />
+                                    <div class="profilePhotoListItemName">Britney Spears</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user10.png" />
+                                    <div class="profilePhotoListItemName">Gwen Stefani</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user11.png" />
+                                    <div class="profilePhotoListItemName">Heidi Klum</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user12.png" />
+                                    <div class="profilePhotoListItemName">Jessica Alba</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user13.png" />
+                                    <div class="profilePhotoListItemName">Jennifer Aniston</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user14.png" />
+                                    <div class="profilePhotoListItemName">Kate Middleton</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user15.png" />
+                                    <div class="profilePhotoListItemName">Lindsay Lohan</div>
+                                </div>
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                <div id="profileFollowers" class="profilePhotoList">
+                	<div class="profilePhotoListName">Takipçilerim(112)</div>
+                    <div class="profilePhotoListScrollable tinyScrollBar">
+                        <div class="scrollbar">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="overview">
+                            	<div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user5.png" />
+                                    <div class="profilePhotoListItemName">Angelina Jolie</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user9.png" />
+                                    <div class="profilePhotoListItemName">Britney Spears</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user11.png" />
+                                    <div class="profilePhotoListItemName">Heidi Klum</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user1.png" />
+                                    <div class="profilePhotoListItemName">Nicole Richie</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user3.png" />
+                                    <div class="profilePhotoListItemName">Miranda Kerr</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user15.png" />
+                                    <div class="profilePhotoListItemName">Lindsay Lohan</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user8.png" />
+                                    <div class="profilePhotoListItemName">Elizabeth Olsen</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user2.png" />
+                                    <div class="profilePhotoListItemName">Adriana Lima</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user14.png" />
+                                    <div class="profilePhotoListItemName">Kate Middleton</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user7.png" />
+                                    <div class="profilePhotoListItemName">Cameron Diaz</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user4.png" />
+                                    <div class="profilePhotoListItemName">Katy Perry</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user13.png" />
+                                    <div class="profilePhotoListItemName">Jennifer Aniston</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user6.png" />
+                                    <div class="profilePhotoListItemName">Blake Lively</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user12.png" />
+                                    <div class="profilePhotoListItemName">Jessica Alba</div>
+                                </div>                                
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user10.png" />
+                                    <div class="profilePhotoListItemName">Gwen Stefani</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user1.png" />
+                                    <div class="profilePhotoListItemName">Nicole Richie</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user2.png" />
+                                    <div class="profilePhotoListItemName">Adriana Lima</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user3.png" />
+                                    <div class="profilePhotoListItemName">Miranda Kerr</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user4.png" />
+                                    <div class="profilePhotoListItemName">Katy Perry</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user5.png" />
+                                    <div class="profilePhotoListItemName">Angelina Jolie</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user6.png" />
+                                    <div class="profilePhotoListItemName">Blake Lively</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user7.png" />
+                                    <div class="profilePhotoListItemName">Cameron Diaz</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user8.png" />
+                                    <div class="profilePhotoListItemName">Elizabeth Olsen</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user9.png" />
+                                    <div class="profilePhotoListItemName">Britney Spears</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user10.png" />
+                                    <div class="profilePhotoListItemName">Gwen Stefani</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user11.png" />
+                                    <div class="profilePhotoListItemName">Heidi Klum</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user12.png" />
+                                    <div class="profilePhotoListItemName">Jessica Alba</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user13.png" />
+                                    <div class="profilePhotoListItemName">Jennifer Aniston</div>
+                                </div>
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user14.png" />
+                                    <div class="profilePhotoListItemName">Kate Middleton</div>
+                                </div> 
+                                <div class="profilePhotoListItem">
+                                	<img class="profilePhotoListItemImage" src="images/users/user15.png" />
+                                    <div class="profilePhotoListItemName">Lindsay Lohan</div>
+                                </div>                                   
+                            </div>
+                        </div>
+                	</div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="basket">
+        	
+            <div id="basketScrollableWrapper">
+                <div id="basketScrollable" class="tinyScrollBar">
+                    <div class="scrollbar">
+                        <div class="track">
+                            <div class="thumb">
+                                <div class="end">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewport">
+                        <div class="overview">
+                            <span id="noItemInBasket"><h2>Sepetiniz şu an boş</h2></span>
+                
+                            <table id="basketTable" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th class="basketTableAlignLeft" colspan="2">Ürünler</th>
+                                    <th class="basketTableAlignCenter" >Adet</th>
+                                    <th class="basketTableAlignCenter" >Ürün Fiyatı</th>
+                                    <th class="basketTableAlignCenter" >Ürün Toplam</th>
+                                </tr>
+                                <tr class="basketTableTotal">
+                                    <td class="basketTableAlignRight" colspan="4">Toplam:</td>
+                                    <td class="basketTableTotalPrice basketTableAlignRight">
+                                        <span class="basketTableTotalPriceAmount">79.00</span> TL
+                                    </td>                    
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>                      
+			</div>
+        </div>	
+        
+	</div>
+    <!-- İçerik Bölüm Bitiş -->
+    
+    <!-- Sonradan Açılan Modüller Başlangıç -->               
+            
+    <!-- Canvas Quick Information -->
+    <div id="dressingRoomCanvasQuickInformation" class="canvasQuickInformation">
+        <div class="controlPanel">
+            <div class="controlPanelInner">
+                <div class="controlPanelDetailView">
+                    <span>Detaylı</span>
+                    <br>
+                    <span>Görünüm</span>
+                </div>
+                <div class="controlPanelTakeOff">
+                    <span>Ürünü</span>
+                    <br>
+                    <span>Çıkar</span>
+                </div>
+            </div>
+        </div>
+        <div class="informationPanel">
+            <div class="informationPanelInner">
+                <div class="informationPanelBrandLogo">
+                    <img>
+                </div>
+                <div class="informationPanelProductInformation">
+                    <div class="informationPanelProductCategory">
+                        <span></span>
+                    </div>
+                    <div class="informationPanelProductPrice">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="colorOptionsPanel">
+            <div class="colorOptionsPanelInner">
+                <div class="colorOptionsColorName">
+                    <span>Renk: </span><span class="colorOptionsColorNameSpan"></span>
+                </div>
+                <div class="colorOptionsColorPallette">
+                </div>
+            </div>
+        </div>
+        <div class="sizeOptionsPanel">
+            <div class="sizeOptionsPanelInner">
+                <div class="sizeOptionsText">
+                    <span>Beden: </span>
+                </div>
+                <div class="sizeOptionsList">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sonradan Açılan Modüller Bitiş -->
+	
+</body>
+
+</html>
+
+<!-- Javascript Includes -->
+<script type="text/javascript" src="js/thirdparty/jquery.js"></script>
+<script type="text/javascript" src="js/thirdparty/jquery-ui.js"></script> 
+<script type="text/javascript" src="js/thirdparty/jquery.tinyscrollbar.min.js"></script> 
+<script type="text/javascript" src="js/thirdparty/jquery.tools.min.js"></script> 
+<script type="text/javascript" src="js/thirdparty/jquery.alerts.js"></script> 
+<script type="text/javascript" src="js/thirdparty/jquery.autosize-min.js"></script> 
+<script type="text/javascript" src="js/thirdparty/json2.js"></script> 
+<script type="text/javascript" src="js/thirdparty/fabric.js"></script> 
+<script type="text/javascript" src="js/thirdparty/uuid.js"></script> 
+<script type="text/javascript" src="js/ui.controls.js"></script> 
+<script type="text/javascript" src="js/dressingroom.object.js"></script> 
+<script type="text/javascript" src="js/dressingroom.control.js"></script> 
+<script type="text/javascript" src="js/data.js"></script> 
